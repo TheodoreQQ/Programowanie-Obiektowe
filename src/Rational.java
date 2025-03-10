@@ -1,3 +1,6 @@
+// Klasa reprezentująca liczby wymierne jako pary liczb całkowitych wraz z podstawowymi działaniami arytmetycznymi i porównaniem. 
+
+
 import java.util.Scanner;
 
 public class Rational {
@@ -60,7 +63,9 @@ public class Rational {
     public boolean equals(Rational arg) {
         return this.licznik == arg.licznik && this.mianownik == arg.mianownik;
     }
-
+    
+// metoda zwracająca 0, gdy this = arg; 1 (np. 1/2 = 2/4), gdy this < arg; -1, gdy this > arg
+    
     public int compareTo(Rational arg) {
         int wartość1 = this.licznik * arg.mianownik;
         int wartość2 = arg.licznik * this.mianownik;
