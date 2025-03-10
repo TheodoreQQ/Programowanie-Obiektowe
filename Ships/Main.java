@@ -13,6 +13,8 @@ public class Main {
             }
             System.out.println(ferry.describe());
         } catch (IllegalArgumentException e) {
+
+// sprawdzenie czy ID jest poprawne (czy zawiera prefiks IMO oraz 7 cyfr po spacji)            
             String invalidNumber = e.getMessage().contains("IMO") ? e.getMessage().split(": ")[1] : "";
             System.out.println("Niepoprawny numer IMO: " + invalidNumber);
         }
